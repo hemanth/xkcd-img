@@ -1,0 +1,20 @@
+{
+    "name": "x-ip",
+    "version": "0.0.0",
+    "description": "Custom element to display client's IP address",
+    "author": "Hemanth.HM",
+    "license": "MIT",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/hemanth/x-ip"
+    },
+    "bugs": {
+        "url": "https://github.com/hemanth/x-ip/issues"
+    },
+    "devDependencies": {
+        "grunt": "~0.4.1",
+        "grunt-cli": "~0.1.9",
+        "grunt-contrib-connect": "~0.5.0",
+        "grunt-text-replace": "~0.3.11"
+    }
+}

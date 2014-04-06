@@ -1,0 +1,25 @@
+{
+  "name": "xkcd-img",
+  "version": "0.1.0",
+  "authors": [
+    "Hemanth.HM <hemanth.hm@gmail.com>"
+  ],
+  "description": "Custom Polymer element for dispalying random images from XKCD!",
+  "keywords": "web-components, xkcd, images, random, ploymer",
+  "main": "index.html",
+  "license": "MIT",
+  "homepage": "http://h3manth.com/",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "platform": "Polymer/platform#~0.2.0",
+    "polymer": "Polymer/polymer#~0.2.0",
+    "polymer-ajax": "polymer/polymer-ajax#~0.2.2"
+  }
+}

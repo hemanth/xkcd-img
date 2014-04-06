@@ -1,0 +1,41 @@
+<link rel="import" href="../components/polymer-ajax/polymer-ajax.html">
+<polymer-element name="xkcd-img" attributes="">
+    <template>
+        <style>
+            * {
+                box-sizing: border-box;    
+            }
+            figure {
+               position: absolute;
+               top: 50%;
+               left: 50%;
+               width: 500px;
+               height: 500px;
+               margin-top: -250px; /* Half the height */
+               margin-left: -250px; /* Half the width */
+            }
+        </style>
+
+       <polymer-ajax id="ajax" auto url="http://xkcd-imgs.herokuapp.com/"
+      handleAs="json"></polymer-ajax>
+
+      <figure>
+          <img src="{{src}}"><img>
+          <figcaption>{{title}}</figcaption>
+      </figure>
+
+    </template>
+    <script>
+        Polymer('xkcd-img', {
+            ready: function () {
+                this.$.ajax.addEventListener('polymer-response',
+                        function (data) {
+                            debugger;
+                            this.src = data.target.response.url
+                            this.title = data.target.response.title
+                        }.bind(this)
+                );
+            }
+        });
+    </script>
+</polymer-element>
