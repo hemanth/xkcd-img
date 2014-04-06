@@ -30,7 +30,6 @@
             ready: function () {
                 this.$.ajax.addEventListener('polymer-response',
                         function (data) {
-                            debugger;
                             this.src = data.target.response.url
                             this.title = data.target.response.title
                         }.bind(this)
