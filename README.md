@@ -1,4 +1,4 @@
-#<xkcd-img>
+# &lt;xkcd-img&gt;
 
 Custom [Polymer](http://polymer-project.org/) element for dispalying a random XKCD img!
 
