@@ -5,7 +5,13 @@
     "Hemanth.HM <hemanth.hm@gmail.com>"
   ],
   "description": "Custom Polymer element for dispalying random images from XKCD!",
-  "keywords": "web-components, xkcd, images, random, ploymer",
+  "keywords": [
+    "web-components",
+    "xkcd",
+    "images",
+    "random",
+    "ploymer"
+  ],
   "main": "index.html",
   "license": "MIT",
   "homepage": "http://h3manth.com/",
