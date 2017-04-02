@@ -1,7 +1,6 @@
 <link rel="import" href="../components/polymer-ajax/polymer-ajax.html">
-<polymer-element name="xkcd-img" attributes="">
-    <template>
-        <style>
+<dom-module id="xkcd-img">
+  <style>
             * {
                 box-sizing: border-box;    
             }
@@ -15,26 +14,25 @@
                margin-left: -250px; /* Half the width */
             }
         </style>
+  <template>
 
-       <polymer-ajax id="ajax" auto url="http://xkcd-imgs.herokuapp.com/"
-      handleAs="json"></polymer-ajax>
+       <polymer-ajax id="ajax" auto="" url="http://xkcd-imgs.herokuapp.com/" handleas="json"></polymer-ajax>
 
       <figure>
-          <a href="{{src}}"><img src="{{src}}" /></a>
+          <a href$="{{src}}"><img src="{{src}}"></a>
           <figcaption>{{title}}</figcaption>
       </figure>
 
     </template>
-    <script>
-        Polymer('xkcd-img', {
-            ready: function () {
-                this.$.ajax.addEventListener('polymer-response',
-                        function (data) {
-                            this.src = data.target.response.url
-                            this.title = data.target.response.title
-                        }.bind(this)
-                );
-            }
-        });
-    </script>
-</polymer-element>
+  <script>
+    Polymer({
+      is: 'xkcd-img',
+      ready: function () {
+        this.$.ajax.addEventListener('polymer-response', function (data) {
+          this.src = data.target.response.url;
+          this.title = data.target.response.title;
+        }.bind(this));
+      }
+    });
+  </script>
+</dom-module>
